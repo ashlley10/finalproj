@@ -1,19 +1,13 @@
 {
-    "build": {
-        "builder": "nixpacks",
-        "config": {
-            "NIXPACKS_PHP_VERSION": "8.2",
-            "NIXPACKS_COMPOSER_ARGS": "--ignore-platform-reqs"
-        },
-        "postBuildCommand": "php artisan optimize:clear && chmod -R 755 storage database"
+  "build": {
+    "builder": "nixpacks",
+    "config": {
+      "NIXPACKS_PHP_VERSION": "8.2",
+      "NIXPACKS_COMPOSER_ARGS": "--ignore-platform-reqs"
     },
-    "deploy": {
-        "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
-    }
-}
-
-{
-    "build": {
-        "postBuildCommand": "touch database/database.sqlite && chmod -R 755 storage database"
-    }
+    "postBuildCommand": "php artisan optimize:clear && chmod -R 755 storage database && touch database/database.sqlite && chmod -R 755 storage database"
+  },
+  "deploy": {
+    "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
+  }
 }
