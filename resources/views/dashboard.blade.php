@@ -78,7 +78,7 @@
             border-radius: 10px;
             text-align: center;
             margin: 0 10px;
-            box-shadow: 0 2px 6px rgb(236, 112, 189));
+            box-shadow: 0 2px 6px rgb(236, 112, 189);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: default;
         }
@@ -96,7 +96,7 @@
 
         .stat-box p {
             font-size: 16px;
-            color: #6rgb(236, 112, 189);
+            color:pink;
             margin-top: 8px;
         }
 
