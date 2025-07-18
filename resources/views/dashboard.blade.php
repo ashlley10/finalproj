@@ -96,7 +96,7 @@
 
         .stat-box p {
             font-size: 16px;
-            color:pink;
+            color:pink  ;
             margin-top: 8px;
         }
 
