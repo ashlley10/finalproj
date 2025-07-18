@@ -139,8 +139,9 @@
         <div class="title">Ashlley's Booking Dashboard</div>
         <div class="actions">
             <a href="{{ route('profile.edit') }}"> Edit Profile</a>
-            <form method="POST" action="{{ route('logout') }}" style="display:inline;">
+            <form method="POST" action="{{ route('register') }}"style="display:inline;">
                 @csrf
+                <!-- input fields -->
                 <button type="submit">Logout</button>
             </form>
         </div>
